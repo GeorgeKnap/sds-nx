@@ -1,0 +1,22 @@
+{
+  "npmScope": "sds-nx",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "enerest-web4": {
+      "tags": []
+    },
+    "enerest-web4-e2e": {
+      "tags": [],
+      "implicitDependencies": ["enerest-web4"]
+    }
+  }
+}
