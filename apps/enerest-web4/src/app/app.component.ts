@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sds-nx-root',
+  selector: 'sds-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

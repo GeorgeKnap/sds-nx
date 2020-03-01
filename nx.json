@@ -12,11 +12,14 @@
   },
   "projects": {
     "enerest-web4": {
-      "tags": []
+      "tags": ["angular","frontend"]
     },
     "enerest-web4-e2e": {
       "tags": [],
       "implicitDependencies": ["enerest-web4"]
+    },
+    "api": {
+      "tags": ["angular", "api"]
     }
   }
 }

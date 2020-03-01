@@ -3,14 +3,9 @@
   "projects": {
     "enerest-web4": {
       "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
       "root": "apps/enerest-web4",
       "sourceRoot": "apps/enerest-web4/src",
-      "prefix": "sds-nx",
+      "prefix": "sds",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -123,6 +118,38 @@
           }
         }
       }
+    },
+    "api": {
+      "projectType": "library",
+      "root": "libs/api",
+      "sourceRoot": "libs/api/src",
+      "prefix": "sds",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/tsconfig.lib.json",
+              "libs/api/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/api/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/jest.config.js",
+            "tsConfig": "libs/api/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/api/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -134,8 +161,30 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
+    "@nrwl/angular:component": {
+      "style": "scss",
+      "spec": true,
+      "skipImport": true,
+      "inlineTemplate": false,
+      "inlineStyle": false,
+      "prefix": "sds"
+    },
+    "@nrwl/angular:module": {
+      "style": "scss",
+      "spec": false,
+      "skipImport": true,
+      "inlineTemplate": false,
+      "inlineStyle": false,
+      "routing": true,
+      "prefix": "sds"
+    },
     "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+      "style": "scss",
+      "spec": true,
+      "skipImport": true,
+      "inlineTemplate": false,
+      "inlineStyle": false,
+      "prefix": "sds"
     }
   },
   "defaultProject": "enerest-web4"
