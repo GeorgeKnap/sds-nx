@@ -1,10 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TestComponent } from './test/test.component';
+import { AdministrationApiModule } from './administration/administration-api.module';
 
 @NgModule({
-  declarations: [TestComponent],
-  imports: [CommonModule],
-  exports: [TestComponent]
+  declarations: [],
+  imports: [
+    AdministrationApiModule
+  ],
+  exports: [
+    AdministrationApiModule
+  ]
 })
 export class ApiModule {}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ApiModule } from '@sds/api';
+import { SharedModule } from '@sds/shared';
 import { AppComponent } from './app.component';
 
 
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    ApiModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 {
-  "npmScope": "sds-nx",
+  "npmScope": "sds",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -12,7 +12,7 @@
   },
   "projects": {
     "enerest-web4": {
-      "tags": ["angular","frontend"]
+      "tags": ["angular", "frontend"]
     },
     "enerest-web4-e2e": {
       "tags": [],
@@ -20,6 +20,9 @@
     },
     "api": {
       "tags": ["angular", "api"]
+    },
+    "shared": {
+      "tags": ["angular"]
     }
   }
 }

@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sds/api": ["libs/api/src/index.ts"]
+      "@sds/api": ["libs/api/src/index.ts"],
+      "@sds/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
